@@ -8,7 +8,7 @@ const outputResolutionInput = document.getElementById("outputResolution")
 const closeWindowBtn = document.getElementById("closeWindow")
 
 const defaultStretchValue = squeeze = 1 + 1.5 / 2.39;
-const defaultOutputResolution = 60; 
+const defaultOutputResolution = .60; 
 
 stretchPercentageInput.value = defaultStretchValue;
 outputResolutionInput.value = defaultOutputResolution;

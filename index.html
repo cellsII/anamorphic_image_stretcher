@@ -8,7 +8,10 @@
 </head>
 <body style="margin: 0; padding: 0;">
     <div style="height: 2rem; background-color: black; width: 100%; -webkit-app-region: drag; display: flex; align-items: center; justify-content: space-between;">
-        <span style="color: #bababa; font-size: small; margin-left: 10px;">Stretcher</span>
+        <div style="display: flex; align-items: center; justify-content: flex-start;">
+            <img src="./media/icon.png" alt="" style="height:  1rem; width: 1rem; margin-left: 10px;">
+            <span style="color: #bababa; font-size: small; margin-left: 10px;">Stretcher</span>
+        </div>
         <button id="closeWindow" style="-webkit-app-region: none;z-index:1000; margin-right: 10px;">
             <img src="./media/x-lg.svg" alt="">
         </button>
@@ -26,7 +29,7 @@
         <div style="display: flex; width: 100%;align-items: center; justify-content: flex-start;">
             <p style="font-size: small">Images Directory</span>
         </div>
-        <div style="display: flex; width: 100%;align-items: center; justify-content: flex-start;">
+        <div style="display: flex; width: 100%;align-items: center; justify-content: center;">
             <input id="projectPathInput" placeholder="Folder Directory...." type="text" style="margin-left: 4px; width: 80rem;">
             <button id="fileBrowseBtn" style="margin: 0 4px;">Browse</button>
         </div>

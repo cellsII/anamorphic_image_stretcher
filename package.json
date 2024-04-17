@@ -20,7 +20,7 @@
   },
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "Stretcher for anamorphic images",
   "build": {
     "appId": "com.textureset.stretcher",
     "productName": "stretcher",

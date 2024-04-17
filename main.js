@@ -45,7 +45,8 @@ const applyImageTransforms = async (images, downsizeRes, stretchPercent)=>{
         await sharp(image)
             .metadata()
             .then(({width, height})=>{
-                console.log("Width ", width, "Height", height)
+                // console.log("Width ", width, " -> ", Math.round(width * stretchPercent * downsizeRes))
+                // console.log("Height", height, " -> ", Math.round(height * downsizeRes))
                 new sharp(image)
                 .resize({
                     fit: "fill",
@@ -92,12 +93,9 @@ ipcMain.on("run", (e, data)=>{
     const images = getImagesFromPath(data.imagesDir);
     try{
         applyImageTransforms(images, data.outputResolution, data.stretchPercentage)
+        win.webContents.send("run:res", "Successfully converted imags.")
     }
     catch{
         win.webContents.send("run:res", "Failed to convert images.")
     }
-    finally{
-        win.webContents.send("run:res", "Successfully Applied Image Transforms")
-    }
-    
 })
