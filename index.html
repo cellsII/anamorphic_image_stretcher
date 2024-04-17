@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stretcher</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body style="margin: 0; padding: 0;">
+    <div style="height: 2rem; background-color: black; width: 100%; -webkit-app-region: drag; display: flex; align-items: center; justify-content: space-between;">
+        <span style="color: #bababa; font-size: small; margin-left: 10px;">Stretcher</span>
+        <button id="closeWindow" style="-webkit-app-region: none;z-index:1000; margin-right: 10px;">
+            <img src="./media/x-lg.svg" alt="">
+        </button>
+    </div>
+    <div id="mainBody" style="margin: 1rem; display: flex;">
+        <div style="width:100%; height: auto; display:flex; align-items: center; justify-content: flex-start;">
+            <span style="font-size: small">Stretch</span>
+            <input id="stretchPercentage" type="text" style="margin-left: 10px; font-size: small;">
+        </div>
+        <div style="width:100%; height: auto; display:flex; align-items: center; justify-content: flex-start;">
+            <span style="font-size: small">Output Resolution</span>
+            <input id="outputResolution" type="text" style="margin-left: 10px; font-size: small;">
+        </div>
+        <br>
+        <div style="display: flex; width: 100%;align-items: center; justify-content: flex-start;">
+            <p style="font-size: small">Images Directory</span>
+        </div>
+        <div style="display: flex; width: 100%;align-items: center; justify-content: flex-start;">
+            <input id="projectPathInput" placeholder="Folder Directory...." type="text" style="margin-left: 4px; width: 80rem;">
+            <button id="fileBrowseBtn" style="margin: 0 4px;">Browse</button>
+        </div>
+        <div  style="display: flex; width: 100%;align-items: center; justify-content: flex-start; margin-top: 40px;">
+            <button id="executeBtn" style="margin-left: 4px; width: 80px; height: 40px; color:aquamarine;">Execute</button>
+        </div>
+       
+    </div>
+    <script src="renderer.js"></script>
+</body>
+</html>
